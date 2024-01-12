@@ -32,6 +32,17 @@ import seaborn as sns
 # sns.barplot(x='species', y='body_mass_g', hue='sex', data=penguins, errorbar='sd')
 # plt.show()
 ##문제2
-# cc = penguins.loc[:, 'bill_length_mm':'body_mass_g']
-# sns.heatmap(data=penguins, annot=True, fmt='.2f', cbar=False)
+# penguins = pd.read_csv('penguins.csv')
+# print(penguins.columns)
+# sns.pairplot(penguins, hue='sex')
 # plt.show()
+##문제3
+penguins = pd.read_csv('penguins.csv')
+sns.regplot(x='flipper_length_mm', y='body_mass_g', data=penguins)
+plt.show()
+
+
+
+
+
+
